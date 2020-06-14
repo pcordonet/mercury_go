@@ -1,0 +1,25 @@
+<h1>Users was born NY - (New York)</h1>
+<hr>
+    <?prg
+        local nCount := 0
+        local cHtml := ''
+        USE ( AppPathData() + '\test.dbf' ) SHARED NEW VIA 'DBFCDX'
+        SET INDEX TO ( AppPathData() + '\test.cdx' )
+        cAlias := Alias()
+        OrdSetFocus( 'state' )
+        DbSeek( 'NY' )
+        cHtml += '<pre>'
+        while (cAlias)->state == 'NY' .and. (cAlias)->( ! Eof() )
+            nCount++
+            cHtml += (cAlias)->first + ' '
+            cHtml += (cAlias)->last + ' '
+            cHtml += (cAlias)->street + ' '
+            cHtml += (cAlias)->city + '<br>'
+            (cAlias)->( DbSkip() )
+        end
+        cHtml += '</pre>'
+        cHtml += '<hr>'
+        cHtml += '<b>Total: </b>' + ltrim(str(nCount))
+        retu cHtml
+    ?>
+<hr>

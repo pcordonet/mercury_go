@@ -1,0 +1,10 @@
+{{ View( 'myheader.view' ) }}
+
+<div class="content">
+    <h3>Module: Mod-B</h3>
+    <div style="border:1px solid red; height:100px">
+    </div>
+    <div style="border:1px solid green; height:200px">
+    </div>
+</div>
+{{ View( 'myfooter.view' ) }}

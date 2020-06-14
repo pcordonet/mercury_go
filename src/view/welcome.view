@@ -1,0 +1,8 @@
+<h1>Bienvenido a nuestro sistema</h1>
+<hr>
+    Menu
+    <br>
+    <ul>
+        <li><a href="{{ Route( 'search' ) }}">Customers by State</a></li>
+        <li><a href="{{ Route( 'logout' ) }}">Logout</a></li>
+    <ul>

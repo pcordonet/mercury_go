@@ -1,0 +1,9 @@
+
+{{ Css( "app.css" ) }}
+
+<div id="title">
+    My Aplication
+    <div id="now">
+        Report time: {{ time() }}
+    </div>
+</div>

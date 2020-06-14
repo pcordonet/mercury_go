@@ -1,0 +1,15 @@
+<h1>Users was born in {{ PARAM 1 }} </h1>
+<hr>
+    <?prg
+        local aRows := PValue(2)
+        local nLen := len( aRows )
+        local cHtml := '<pre>'
+        local nI, hRow
+        for nI := 1 TO nLen
+            hRow := aRows[nI]
+            cHtml += hRow[ 'first' ] + ' ' + hRow[ 'last' ] + ' ' + hRow[ 'street' ] + '<br>'
+        next
+        cHtml += '</pre>'
+        retu cHtml
+    ?>
+<hr>

@@ -1,0 +1,16 @@
+<h1>Search Customers by State</h1>
+<hr>
+    <?prg
+        local cError := pvalue(1)
+        if valtype( cError ) == 'C'
+            return '<b>Error: </b>' + cError + '<hr>'
+        endif
+        return ''
+    ?>
+    <form action="{{ Route( 'getst' ) }}" method="post">
+        State: (ex. NY, IL, CO, LA,...)
+        <br>
+        <input type="text" name="mystate" value="NY">
+        <br><br>
+        <input type="submit" value="Send data">
+    </form>

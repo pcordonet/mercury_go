@@ -1,0 +1,49 @@
+{{ View( 'head.view' ) }}
+{{ Css( 'login.css' ) }}
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <img src="{{ AppUrlImg() + 'mercury_mini.png' }}" alt="Logo" style="width:35px;">
+    <a class="navbar-brand" href="{{ Route( 'root' )}}">&nbsp;&nbsp;Go !</a>
+</nav>
+<?prg
+    local cError := pvalue(1)
+    local cHtml := ''
+    if valtype( cError ) == 'C'
+        cHtml := '<div class="alert alert-danger">'
+        cHtml += '<strong>Error !</strong> ' + cError
+        cHtml += '</div>'
+    endif
+    return cHtml
+?>
+<form action="{{ Route( 'auth' ) }}" method="post">
+    <div class="card mb-3 " style="max-width: 540px;">
+        <div class="row no-gutters">
+            <div class="col-md-4 container_logo">
+                <img src="{{ AppUrlImg() + 'harbour.png' }}" class="rounded logo" alt="Cinque Terre">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Autentication</h5>
+                    <div class="card-text">
+                        <div class="form-group row align-items-center red">
+                            <div class="col-12">
+                                <label for="user">User</label>
+                                <input type="text" class="form-control" id="user" name="user" placeholder="User login... (demo)">
+                            </div>
+                        </div>
+                        <div class="form-group row align-items-center red">
+                            <div class="col-12">
+                                <label for="psw">Password</label>
+                                <input type="text" class="form-control" id="psw" name="psw" placeholder="Password (1234)">
+                            </div>
+                        </div>
+                        <div class="form-group row align-items-center text-center">
+                            <div class="col">
+                                <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

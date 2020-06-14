@@ -1,0 +1,34 @@
+/* Header */
+body {
+	margin:0px;
+	}
+	#title {
+	margin: 10px;
+	border: 1px solid black;
+	padding: 5px;
+	right: 50px;
+	color: blue;
+	background-color: lightgray;
+	box-shadow: 5px 5px 5px grey;
+}
+#now {
+	float: right;
+	font-size: 10px;
+	margin-top: 10px;
+	color: black;
+	font-family: fantasy;
+}
+/* Footer */
+#copyright {
+	border: 1px solid black;
+	background-color: lightgray;
+	bottom: 0px;
+	position: absolute;
+	width: 100%;
+	box-sizing: border-box;
+	font-size: 12px;
+}
+/* Content */
+.content {
+	padding: 20px;
+}
