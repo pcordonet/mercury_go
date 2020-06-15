@@ -14,14 +14,6 @@
 FUNCTION Main()
 local oApp
 
-/*
-	o := WDO():Rdbms( 'MARIADB', "SQLSOFT", "root", "Aplitec1234", "cusins", 3306 )
-	IF o:lConnect
-		
-		? 'Connected !', '<b>Version RDBMS MariaDB', o:Version()
-		
-	ENDIF	
-*/
 
 	// Define App
 	DEFINE APP oApp TITLE 'My web aplication...' ON INIT Config() CREDENTIALS 'HshoP!2020v1' COOKIE 'MyApp'
